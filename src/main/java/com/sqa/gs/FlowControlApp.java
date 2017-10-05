@@ -42,9 +42,11 @@ public class FlowControlApp {
 	 */
 	private static void determineMonthBasedOnInt() {
 		System.out.println("Please enter a integer between 1 and 12");
-		Scanner scanner = new Scanner(System.in);
-		String input = scanner.nextLine();
-		int num = Integer.parseInt(input);
+		Scanner scanner = new Scanner(System.in); // Obtain input from user
+													 // System.in
+		String input = scanner.nextLine(); // Store that input as a string
+		int num = Integer.parseInt(input); // Convert string input from user to
+											 // a "int" - in order to use Switch
 		switch (num) {
 		case 1:
 			System.out.println("Month is January");
@@ -93,17 +95,20 @@ public class FlowControlApp {
 	 * associated grade letter.
 	 */
 	private static void evalGrade() {
-		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please enter your grade value \n");
-		String input = scanner.nextLine();
-		float num = Float.parseFloat(input);
-		if ((num > 3.29) && (num <= 4.0)) {
+		Scanner scanner = new Scanner(System.in); // Obtain input from user
+													 // System.in
+		String input = scanner.nextLine(); // Store that input as a string
+		float num = Float.parseFloat(input); // Using float
+		if (num > 4) {
+			System.out.println("Enter a valid grade between 0 and 4");
+		} else if (num > 3.29) {
 			System.out.println("Grade is A! Congrats");
-		} else if ((num > 2.29) && (num < 3.3)) {
+		} else if (num > 2.29) {
 			System.out.println("Grade is B!");
-		} else if ((num > 1.29) && (num < 2.3)) {
+		} else if (num > 1.29) {
 			System.out.println("Grade is C!");
-		} else if ((num > 0) && (num < 1.3)) {
+		} else if (num > 0) {
 			System.out.println("Grade is D!");
 		} else if (num == 0) {
 			System.out.println("Grade is E!");
